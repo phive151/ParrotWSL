@@ -87,23 +87,23 @@ echo ""
 echo -e "\n\tPlease select 1 - 5"
 read -p " : " napt
 
-case "$napt" in
-  1)  
-      _secInstall && _zshInstall
-  ;;
-  2)   
-      _secInstall
-  ;;
-  3)  
-      _coreInstall && _zshInstall
-  ;;
-  4)  
-      _coreInstall
-  ;;
-  5)  
-      _byeFelicia
-      exit 1
-  ;;
-esac
-
+while true; do
+  case "$napt" in
+    1)  
+        _secInstall && _zshInstall
+    ;;
+   2)   
+        _secInstall
+    ;;
+    3)  
+        _coreInstall && _zshInstall
+    ;;
+    4)  
+       _coreInstall
+    ;;
+    5)  
+        _byeFelicia && exit 1
+    ;;
+  esac; break
+  done
 exit 0
