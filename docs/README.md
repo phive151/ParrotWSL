@@ -1,5 +1,13 @@
 DOCS
 ===
+Apt Sources
+---
+
+### /etc/apt/sources.list
+The sources file that comes with the container is crap in comparison.  The file I've included is rich with comments, direction, and options.
+Have yourself a look-see.  Someone took the time to write it out for you. So give it a lil' gander. I am out in the Western United States so 
+I have it configured for whats best for me.  
+**_Milage may vary._**
 
 WSL2 Config files
 ---
