@@ -41,7 +41,7 @@ sudo service docker start
 
   **__Launch the container__**
   ```bash
-  docker run --rm -ti --network host -v $PWD/work:/work parrot.run/core
+  docker run -t parrot.run/core bash ls /
   ```
 ##### Security Template
 #### [Parrot.run/sec](https://parrotsec.org/docs/cloud/parrot-on-docker/#parrotrunsecurity)
@@ -52,7 +52,7 @@ sudo service docker start
 
   **__Launch the container__**
   ```bash
-  docker run --rm -ti --network host -v $PWD/work:/work parrot.run/security
+  docker run -t parrot.run/security bash ls /
   ```
   
   4. Get the image's container ID and save it as a variable 
@@ -61,7 +61,7 @@ sudo service docker start
   ```
   5. Export your image to the Windows file system
   ```bash
-  docker export $dockerContainerID > /mnt/c/temp/parrotos.tar
+  docker export $dockerContainerID > /mnt/c/temp/ParrotOS.tar
   ```
   All that so you can import the tar file as an image into WSL2
  ___
@@ -78,7 +78,7 @@ sudo service docker start
   2. move into your new directory Import your tar file into WSL2.
   ```powershell
   cd WSLdistro
-  wsl --import .\ "C:\temp\parrotos.tar"
+  wsl --import .\ "C:\temp\ParrotOS.tar"
   ```
   3. Check installed distros
   ```powershell
@@ -86,7 +86,7 @@ sudo service docker start
   ```
   4. Launch that nizbich
   ```powershell
-  wsl -d parrotos
+  wsl -d ParrotOS
   ```
   
 Extras in this Repository
