@@ -1,6 +1,13 @@
-## This is the WSL2 config file.  Save this to your *Windows* profile
-## at "C:\Users\<User>\.wslconfig". Link to Documentation below
-## https://learn.microsoft.com/en-us/windows/wsl/wsl-config
+: ' 
+This is the WSL2 config file.  Save this to your *Windows* profile
+at "C:\Users\<User>\.wslconfig". Link to Documentation below -
+    ( https://learn.microsoft.com/en-us/windows/wsl/wsl-config )
+========================================================================
+****************DON'T ADD THIS UNTIL YOU READ THE DOCS******************
+========================================================================
+If you do and have errors, you can almost be certain that deleating this
+file will take care of it. How do I know? Well, becasue I'm a hypocrite.
+'
 
 # Settings apply across all Linux distros running on WSL 2
 [wsl2]
