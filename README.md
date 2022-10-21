@@ -27,7 +27,7 @@ Prerequisites
 
 ___
 
-So the easiest way \(besides getting yours here\) to get a ParrotOS tar file of the entire image is to compress a container. I  highly encourage you to head over to the ParrotSec [website](https://parrotsec.org) to view their latest [Downloads](https://parrotsec.org/download/). Here is their official [Docker documentation](https://parrotsec.org/docs/cloud/parrot-on-docker/) where you will find 2 containers.  Again - I *highly* recommend that you go check it out.  
+So the easiest way ~~\(besides getting yours here\)~~ to get a ParrotOS tar file of the entire image is to compress a container. I  highly encourage you to head over to the ParrotSec [website](https://parrotsec.org) to view their latest [Downloads](https://parrotsec.org/download/). Here is their official [Docker documentation](https://parrotsec.org/docs/cloud/parrot-on-docker/) where you will find 2 containers.  Again - I *highly* recommend that you go check it out.  
 ___
 1. Open your WSL2 CLI (*bash or whatevs*) in a distro you've already got installed.
 
