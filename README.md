@@ -1,6 +1,6 @@
    <div style="text-align: center;">
    
-   [alt text](https://softwarereviews.s3.amazonaws.com/production/logos/offerings/6116/original/ParrotSecurity_logo.png?1582749483)
+   ![alt text](https://softwarereviews.s3.amazonaws.com/production/logos/offerings/6116/original/ParrotSecurity_logo.png?1582749483)
 
    </div>
 
