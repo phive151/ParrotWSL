@@ -2,14 +2,19 @@
 #
 # An quick setup to get you going  with apt functions that give you all the parrot upgrades
 # to get the "Security" version with tools and what not
-
-
+# set -ex
+_cr() {
+  if [[ "$UID" != 0 ]]; then
+    echo "You must execute this script as root"
+    exit 1
+  fi
+}
 _asl() {
 mv /etc/apt/sources.list /etc/apt/sources.list.bak
-cat ParrotOS/docs/sources.list | tee /etc/apt/sources.list
+cat "${cwd_}"/docs/sources.list | tee /etc/apt/sources.list
 }
 _adoptDot() {
-cp ./ParrotWSL/docs/z{shrc,path,alias} "${HOME}"/.z{shrc,path,alias}
+cp "${cwd_}"/docs/z{shrc,path,alias} "${HOME}"/.z{shrc,path,alias}
 }
 _auu() {
 apt-get update
@@ -31,19 +36,24 @@ _zshInstall() {
   break;
   done
   chsh -s /usr/bin/zsh
+  _adoptDot
   source ${HOME}/.zshrc
 }
 
 _byeFelicia() {
   echo "After all we've been through?!?" 
   sleep 3 
-  echo "fine! 
+  echo "fine!" 
 }
 
+# Check to see if the User is root
+_cr
 # clone repo
 git clone "https://github.com/phive151/ParrotWSL"
-echo "Downloading the Repository"
-echo""
+cd ParrotWSL
+cwd_="${PWD}"
+echo ""
+echo ""
 
 # move sources.list to /etc/apt
 echo "Updating sources..."
@@ -63,7 +73,8 @@ _auu;
 break
 done
 
-echo -e "please select from the options below. Script defaults to full install of"
+echo -e "please select from the options below." 
+echo -e "Script defaults to full install of"
 echo -e "Parrot security Meta Package."
 echo ""
 echo -e "\n\t 1.\) Install ParrotOS Full Security tools, and change my shell to ZSH"
@@ -94,3 +105,5 @@ case "$napt" in
       exit 1
   ;;
 esac
+
+exit 0

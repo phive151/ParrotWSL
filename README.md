@@ -1,3 +1,9 @@
+   <div style="text-align: center;">
+   
+   ![alt text](https://softwarereviews.s3.amazonaws.com/production/logos/offerings/6116/original/ParrotSecurity_logo.png?1582749483)
+
+   </div>
+
 ParrotWSL
 ===========
 ParrotOS on WSL2
@@ -19,11 +25,11 @@ Prerequisites
 
  Get yourself a [hot-n-ready](https://littlecaesars.com/) tar'd ParrotOS
  -----------
-**Now I imagine that there are a ton of ways to go about this.  Heck, I even did you a solid and got one here for ya.  But for the sake of learnin ya one, we'll go through the steps anyway.**
+**Now I imagine that there are a ton of ways to go about this.  ~~Heck, I even did you a solid and got one here for ya.~~  But for the sake of learnin you one, we'll go through the steps anyway.**
 
 ___
 
-So the easiest way \(besides getting yours here\) to get a ParrotOS tar file of the entire image is to compress a container. I  highly encourage you to head over to the ParrotSec [website](https://parrotsec.org) to view their latest [Downloads](https://parrotsec.org/download/). Here is their official [Docker documentation](https://parrotsec.org/docs/cloud/parrot-on-docker/) where you will find 2 containers.  Again - I *highly* recommend that you go check it out.  
+So the easiest way ~~\(besides getting yours here\)~~ to get a ParrotOS tar file of the entire image is to compress a container. I  highly encourage you to head over to the ParrotSec [website](https://parrotsec.org) to view their latest [Downloads](https://parrotsec.org/download/). Here is their official [Docker documentation](https://parrotsec.org/docs/cloud/parrot-on-docker/) where you will find 2 containers.  Again - I *highly* recommend that you go check it out.  
 ___
 1. Open your WSL2 CLI (*bash or whatevs*) in a distro you've already got installed.
 
@@ -41,7 +47,7 @@ sudo service docker start
 
   **__Launch the container__**
   ```bash
-  docker run -t parrot.run/core bash ls /
+  docker run -t parrotsec/core bash
   ```
 ##### Security Template
 #### [Parrot.run/sec](https://parrotsec.org/docs/cloud/parrot-on-docker/#parrotrunsecurity)
@@ -52,7 +58,7 @@ sudo service docker start
 
   **__Launch the container__**
   ```bash
-  docker run -t parrot.run/security bash ls /
+  docker run -t parrotsec/security bash
   ```
   
   4. Get the image's container ID and save it as a variable 
@@ -91,4 +97,5 @@ sudo service docker start
   
 Extras in this Repository
 ---
-I have their full /etc/apt/sources.list in the "docs"
+Check out the Docs folder.  There are a few things in there which help out post import.
+Some dot files, and wsl config files.  If they help, cool, if not.. no sweat.
