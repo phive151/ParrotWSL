@@ -41,7 +41,7 @@ sudo service docker start
 
   **__Launch the container__**
   ```bash
-  docker run -t parrot.run/core bash ls /
+  docker run -t parrotsec/core bash
   ```
 ##### Security Template
 #### [Parrot.run/sec](https://parrotsec.org/docs/cloud/parrot-on-docker/#parrotrunsecurity)
@@ -52,7 +52,7 @@ sudo service docker start
 
   **__Launch the container__**
   ```bash
-  docker run -t parrot.run/security bash ls /
+  docker run -t parrotsec/security bash
   ```
   
   4. Get the image's container ID and save it as a variable 
@@ -91,4 +91,5 @@ sudo service docker start
   
 Extras in this Repository
 ---
-I have their full /etc/apt/sources.list in the "docs"
+Check out the Docs folder.  There are a few things in there which help out post import.
+Some dot files, and wsl config files.  If they help, cool, if not.. no sweat.
