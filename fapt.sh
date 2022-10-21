@@ -49,6 +49,7 @@ _byeFelicia() {
 # Check to see if the User is root
 _cr
 # clone repo
+cd
 git clone "https://github.com/phive151/ParrotWSL"
 cd ParrotWSL
 cwd_="${PWD}"
