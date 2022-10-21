@@ -1,3 +1,7 @@
+|![alt text](https://softwarereviews.s3.amazonaws.com/production/logos/offerings/6116/original/ParrotSecurity_logo.png?1582749483)| 
+|:-------------------------------------------------------------------------------------------------------------------------------:|
+|                                                                                                                                 |
+
 ParrotWSL
 ===========
 ParrotOS on WSL2
@@ -19,7 +23,7 @@ Prerequisites
 
  Get yourself a [hot-n-ready](https://littlecaesars.com/) tar'd ParrotOS
  -----------
-**Now I imagine that there are a ton of ways to go about this.  Heck, I even did you a solid and got one here for ya.  But for the sake of learnin ya one, we'll go through the steps anyway.**
+**Now I imagine that there are a ton of ways to go about this.  ~~Heck, I even did you a solid and got one here for ya.~~  But for the sake of learnin you one, we'll go through the steps anyway.**
 
 ___
 
