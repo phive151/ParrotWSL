@@ -1,6 +1,6 @@
 #!/usr/bin/env  bash
 #
-# An quick setup to get you going  with apt functions that give you all the parrot upgrades 
+# An quick setup to get you going  with apt functions that give you all the parrot upgrades
 # to get the "Security" version with tools and what not
 
 
