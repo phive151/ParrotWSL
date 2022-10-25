@@ -1,36 +1,50 @@
 #!/usr/bin/env  bash
-#
-# An quick setup to get you going  with apt functions that give you all the parrot upgrades
-# to get the "Security" version with tools and what not
+## An quick setup to get you going  with apt functions that give you all the parrot upgrades
+## to get the "Security" version with tools and what not
 # set -ex
-_cr() {
-  if [[ "$UID" != 0 ]]; then
-    echo "You must execute this script as root"
+
+## CTRL-C
+trap INT
+whoami
+## Root Of the Repo Directory
+ScriptRoot=$(echo $PWD)
+
+## Source Color Variables
+source "${ScriptRoot}"/docs/colors.conf
+
+## ========================================================================================
+## ==                  LOCAL            SCRIPT            FUNCTIONS                      ==
+## ========================================================================================
+
+## Check to see if User is Root Exit script if he is not
+check_root() {
+  if [ "$(whoami)" != "root" ]; then
+    echo -e "${ExitStatement}"
     exit 1
   fi
 }
-_asl() {
+
+apt_sources_list() {
 mv /etc/apt/sources.list /etc/apt/sources.list.bak
-cat "${cwd_}"/docs/sources.list | tee /etc/apt/sources.list
+cat "${ScriptHome}"/docs/sources.list | tee /etc/apt/sources.list
 }
-_adoptDot() {
-cp "${cwd_}"/docs/z{shrc,path,alias} "${HOME}"/.z{shrc,path,alias}
+adopt_dot_files() {
+echo "${ScriptRoot}/docs/z{shrc,env,alias" "${HOME}/.z{shrc,env,alias}"
 }
-_auu() {
+apt_upgrade_clean() {
 apt-get update
 apt-get upgrade -y 
 apt-get autoremove -y
 apt-get autoclean
 }
-_secInstall() {
-  apt-get -y install parrot-tools-full parrot-meta-devel parrot-zsh-profiles parrot-interface-full \
-  parrot-core parrot-menu parrot-desktop-xfce parrot-displaymanager parrot-drivers parrot-updater
+secInstall() {
+  apt-get -y install 
 }
-_coreInstall() {
+coreInstall() {
   apt-get install -y parrot-core parrot-interface parrot-meta-devel parrot-displaymanager \ 
   parrot-drivers parrot-updater
 }
-_zshInstall() {
+zshInstall() {
   while true; do
   apt-get install -y zsh zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting zsh-dev time zsh-antigen;
   break;
@@ -40,21 +54,19 @@ _zshInstall() {
   source ${HOME}/.zshrc
 }
 
-_byeFelicia() {
+byeFelicia() {
   echo "After all we've been through?!?" 
   sleep 3 
   echo "fine!" 
 }
 
 # Check to see if the User is root
-_cr
+check_root
 # clone repo
 cd
 git clone "https://github.com/phive151/ParrotWSL"
 cd ParrotWSL
-cwd_="${PWD}"
-echo ""
-echo ""
+clear
 
 # move sources.list to /etc/apt
 echo "Updating sources..."
@@ -65,13 +77,11 @@ echo ""
 
 # update upgrade remove and clean files
 while true; do
-_asl;
-break
+apt_sources_list;
 done
 
 while true; do
-_auu;
-break
+apt_upgrade_clean;
 done
 
 echo -e "please select from the options below." 
@@ -105,6 +115,6 @@ while true; do
     5)  
         _byeFelicia && exit 1
     ;;
-  esac; break
+  esac
   done
 exit 0
