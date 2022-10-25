@@ -98,4 +98,5 @@ sudo service docker start
 Extras in this Repository
 ---
 Check out the Docs folder.  There are a few things in there which help out post import.
-Some dot files, and wsl config files.  If they help, cool, if not.. no sweat.
+Some dot files, and wsl config files.  If they help, cool, if not.. no sweat.  All in 
+all this is just a compilation of other ideas... I'm not that smart 😝
