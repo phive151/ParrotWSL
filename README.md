@@ -81,10 +81,10 @@ sudo service docker start
   mkdir WSLdistro
   ```
   
-  2. move into your new directory Import your tar file into WSL2.
+  2. move into your new directory Import your tar file into WSL2. Syntax is important here '''wsl --import <DistroName> <where distro data will live> <tar file to be imported>
   ```powershell
   cd WSLdistro
-  wsl --import .\ "C:\temp\ParrotOS.tar"
+  wsl --import ParrotSec .\ "C:\temp\ParrotOS.tar"
   ```
   3. Check installed distros
   ```powershell
