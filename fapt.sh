@@ -12,14 +12,14 @@ ScriptRoot=$(echo $PWD)
 ## Source Color Variables
 source "${ScriptRoot}"/docs/colors.conf
 
-## ========================================================================================
-## ==                  LOCAL            SCRIPT            FUNCTIONS                      ==
-## ========================================================================================
+## =====================================================================================
+## ==                  LOCAL            SCRIPT            FUNCTIONS                   ==
+## =====================================================================================
 
 ## Check to see if User is Root Exit script if he is not
 check_root() {
   if [ "$(whoami)" != "root" ]; then
-    echo -e "${ExitStatement}"
+    echo -e "$ExitStatement"
     exit 1
   fi
 }
